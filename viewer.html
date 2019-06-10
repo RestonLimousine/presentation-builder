@@ -2,35 +2,46 @@
 <html>
 <head>
 <style>
-html {
-  background-color: #cccccc;
-}
-body {
-  margin: 0;
-}
-.page {
-  height: 816px;
-  width: 1056px;
-  background: white;
-  padding: 96px;
-  box-sizing: border-box;
-  text-align: center;
-}
-img {
-  width: 75%;
-}
+  html {
+    background-color: #cccccc;
+  }
+  body {
+    margin: 0;
+  }
+  .page {
+    height: 816px;
+    width: 1056px;
+    background: white;
+    padding: 96px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  img {
+    width: 75%;
+    border: 1px solid gray;
+  }
+  .text {
+    font-size: 2em;
+  }
 </style>
 </head>
 <body>
 <script>
 [
-  "images/01-enter-username.jpg"
-].forEach(function (src) {
-  var page = document.createElement("div");
+  ["images/01-enter-username.jpg",
+   "Visit https://cloud.samsara.com and enter your username and password"]
+].forEach(function (content) {
+  var text = content[0],
+      src = content[1],
+      page = document.createElement("div"),
+      img = document.createElement("img"),
+      textDiv = document.createElement("div");
   page.className = "page";
-  var img = document.createElement("img");
   img.src = src;
   page.appendChild(img);
+  textDiv.className = "text";
+  textDiv.textContent = text;
+  page.appendChild(textDiv);
   document.body.appendChild(page);
 });
 </script>
