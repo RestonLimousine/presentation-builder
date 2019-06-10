@@ -18,7 +18,16 @@ body {
 <body>
 <div class="page"></div>
 <script>
-
+[
+  "images/01-enter-username.jpg"
+].forEach(function (src) {
+  var page = document.createElement("div");
+  page.className = "page";
+  var img = document.createElement("img");
+  img.src = src;
+  page.appendChild(img);
+  document.body.appendChild(page);
+});
 </script>
 </body>
 </html>
