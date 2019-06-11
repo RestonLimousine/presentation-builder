@@ -13,9 +13,10 @@
     height: 816px;
     width: 1056px;
     background: white;
-    padding: 96px;
+    padding: 48px;
     box-sizing: border-box;
     text-align: center;
+    margin-bottom: 96px;
   }
   img {
     width: 75%;
@@ -31,7 +32,9 @@
 var converter = new showdown.Converter();
 [
   ["images/01-enter-username.jpg",
-   "Visit <https://cloud.samsara.com> and enter your username and password."]
+   'Visit <https://cloud.samsara.com> and enter your RLS email address as your username. Then click "Continue".'],
+  ["images/02-enter-password.jpg",
+   'Enter your password, then click "Sign In".']
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
       src = content[0],
