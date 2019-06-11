@@ -60,6 +60,7 @@ var converter = new showdown.Converter();
       textDiv = document.createElement("div"),
       coordinates = document.getElementById("coordinates");
   page.addEventListener("mousemove", function (e) {
+    console.log(e.screenY, page.offsetTop);
     coordinates.textContent = (e.screenX - page.offsetLeft) + "," + (e.screenY - page.offsetTop);
     coordinates.style.left = e.clientX + 20 + "px";
     coordinates.style.top = e.clientY + 20 + "px";
