@@ -39,7 +39,9 @@ var converter = new showdown.Converter();
   ["images/01-enter-username.jpg",
    'Visit <https://cloud.samsara.com> and enter your RLS email address as your username. Then click "Continue".'],
   ["images/02-enter-password.jpg",
-   'Enter your password, then click "Sign In".']
+   'Enter your password, then click "Sign In".'],
+  ["images/03-main-screen.jpg",
+   'You will now be taken to the "Fleet Overview" screen.']
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
       src = content[0],
