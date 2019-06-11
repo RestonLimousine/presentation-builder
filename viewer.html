@@ -41,7 +41,9 @@ var converter = new showdown.Converter();
   ["images/02-enter-password.jpg",
    'Enter your password, then click "Sign In".'],
   ["images/03-main-screen.jpg",
-   'You will now be taken to the "Fleet Overview" screen.']
+   'You will now be taken to the "Fleet Overview" screen. Find a vehicle by searching through the listing on the left.'],
+  ["images/04-sort-a-z.jpg",
+   'To make it easier to find a vehicle, sort the listing alphabetically.']
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
       src = content[0],
