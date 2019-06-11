@@ -31,9 +31,16 @@
       margin-bottom: 0;
     }
   }
+  #coordinates {
+    position: fixed;
+    background: white;
+    left: -100px;
+    top: -100px;
+  }
 </style>
 </head>
 <body>
+<div id="coordinates"></div>
 <script>
 var converter = new showdown.Converter();
 [
@@ -50,7 +57,13 @@ var converter = new showdown.Converter();
       src = content[0],
       page = document.createElement("div"),
       img = document.createElement("img"),
-      textDiv = document.createElement("div");
+      textDiv = document.createElement("div"),
+      coordinates = document.getElementById("coordinates");
+  page.addEventListener("mousemove", function (e) {
+    coordinates.textContent = e.clientX + "," + e.clientY;
+    coordinates.style.left = e.clientX + "px";
+    coordinates.style.top = e.clientY + "px";
+  }, true);
   page.className = "page";
   img.src = src;
   page.appendChild(img);
