@@ -28,12 +28,12 @@
 </head>
 <body>
 <script>
-var showdown = new showdown.Converter();
+var converter = new showdown.Converter();
 [
   ["images/01-enter-username.jpg",
    "Visit <https://cloud.samsara.com> and enter your username and password."]
 ].forEach(function (content) {
-  var text = showdown.makeHTML(content[1]),
+  var text = converter.makeHTML(content[1]),
       src = content[0],
       page = document.createElement("div"),
       img = document.createElement("img"),
