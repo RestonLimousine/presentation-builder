@@ -42,7 +42,7 @@ var converter = new showdown.Converter();
   img.src = src;
   page.appendChild(img);
   textDiv.className = "text";
-  textDiv.textContent = text;
+  textDiv.innerHTML = text;
   page.appendChild(textDiv);
   document.body.appendChild(page);
 });
