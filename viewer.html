@@ -21,6 +21,16 @@
     display: flex;
     flex-direction: column;
   }
+  .page-no {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   img {
     width: 100%;
     border: 1px solid gray;
@@ -56,7 +66,8 @@
 <body>
 <div id="coordinates"></div>
 <script>
-var converter = new showdown.Converter();
+var converter = new showdown.Converter(),
+    pageNo = 1;
 [
   ["images/01-enter-username.jpg",
    'Visit <https://cloud.samsara.com> and enter your RLS email address as your username. Then click "Continue".'],
@@ -110,7 +121,11 @@ var converter = new showdown.Converter();
       page = document.createElement("div"),
       img = document.createElement("img"),
       textDiv = document.createElement("div"),
-      coordinates = document.getElementById("coordinates");
+      coordinates = document.getElementById("coordinates"),
+      pageNoDiv = document.createElement("div");
+  pageNoDiv.className = "page-no";
+  pageNoDiv.textContent = pageNo;
+  pageNo++;
   page.addEventListener("mousemove", function (e) {
     coordinates.textContent = (e.pageX - page.offsetLeft) + "," + (e.pageY - page.offsetTop);
     coordinates.style.left = e.clientX + 20 + "px";
