@@ -16,7 +16,6 @@
     background: white;
     padding: 48px;
     box-sizing: border-box;
-    text-align: center;
     margin-bottom: 96px;
     position: relative;
     display: flex;
@@ -64,13 +63,16 @@ var converter = new showdown.Converter();
   ["images/02-enter-password.jpg",
    'Enter your password, then click "Sign In".'],
   ["images/03-main-screen.jpg",
-   'You will now be taken to the "Fleet Overview" screen. Find a vehicle by searching through the listing on the left. You can either scroll through the listing or search by typing the vehicle\'s name in the search input above the listing.'],
+   'You will now be taken to the "Fleet Overview" screen. Find a vehicle by searching through the listing on the left. ' +
+   "You can either scroll through the listing or search by typing the vehicle's name in the search input above the listing."],
   ["images/04-sort-a-z.jpg",
-   'To make it easier to find a vehicle, sort the listing alphabetically.',
+   "To make it easier to find a vehicle, you can also sort the listing alphabetically.",
    [[50,145,140,225]]
   ],
   ["images/05-vehicle-view.jpg",
-   "After clicking on the vehicle, you will see this view."]
+   "After clicking on the vehicle, you will see this view. The vehicle's location is shown on the map, " +
+   "and the vehicle's trips are listed on the left.\n* A green circle on the map means the vehicle is idling.\n" +
+   "* A green arrow means the vehicle is moving.\n* A gray circle means the engine is off."]
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
       src = content[0],
