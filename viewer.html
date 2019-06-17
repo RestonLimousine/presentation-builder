@@ -32,11 +32,12 @@
     justify-content: flex-start;
   }
   img {
-    width: 100%;
+    width: 90%;
     border: 1px solid gray;
     box-sizing: border-box;
   }
   .img {
+    text-align: center;
     width: 100%;
     box-sizing: border-box;
     padding-bottom: 0.5em;
@@ -146,7 +147,8 @@ var converter = new showdown.Converter(),
    [[375,465,670,510]]
   ],
   ["images/09-reports-page.jpg",
-   "To go to the Reports page, click \"Reports\"."
+   "To go to the Reports page, click \"Reports\".",
+   [[250,90,285,110]]
   ]
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
