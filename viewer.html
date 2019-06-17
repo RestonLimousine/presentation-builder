@@ -123,6 +123,11 @@ var converter = new showdown.Converter(),
    "the photos along the bottom of the page or use the left/right arrows on the big photo to view all the photos. " +
    "Click on the Back button to go back to the map.",
    [[215,315,245,345],[700,315,725,345],[210,115,260,140]]
+  ],
+  ["images/08-last-connected.jpg",
+   "Back on the map view, one thing to look for is a \"Last Connected\" date. Whenever you see this, it means that there " +
+   "is a problem with the gateway (the GPS device), and the vehicle is not reporting GPS data. Please fill out a GPS IR form " +
+   "at <https://restonlimo.com/internal> to report this issue."
   ]
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
