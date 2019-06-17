@@ -85,7 +85,13 @@ var converter = new showdown.Converter();
    "To the left of the map, you will see details on the vehicle, including its name, the most recent dashcam photo, " +
    "current driver, mileage, fuel level, and more. The info that is available will vary by vehicle.",
    [[55,120,255,560]]
-  ] 
+  ],
+  ["images/06-trips-listing.jpg",
+   "Scroll down on the left side to see the trips listing. A trip begins when a vehicle is moving at least 5 mph, " +
+   "and ends when the vehicle has been stopped for 5 minutes. Therefore, a single day, even a single job, will be " +
+   "broken up into multiple trips.",
+   [[55,120,255,560]]
+  ]
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
       src = content[0],
