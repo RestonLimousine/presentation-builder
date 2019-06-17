@@ -100,7 +100,7 @@ var converter = new showdown.Converter();
     rectDiv.style.height = rect[3] - rect[1] + "px";
     page.appendChild(rectDiv);
   });
-  document.body.appendChild(page);
+  document.body.insertBefore(page, coordinates);
 });
 </script>
 </body>
