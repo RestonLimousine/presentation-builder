@@ -99,6 +99,12 @@ var converter = new showdown.Converter(),
    "current driver, mileage, fuel level, and more. The info that is available will vary by vehicle.",
    [[50,115,255,560]]
   ],
+  ["images/08-last-connected.jpg",
+   "One important thing to look for here is a \"Last Connected\" date. Whenever you see this, it means that there " +
+   "is a problem with the gateway (the GPS device), and the vehicle is not reporting GPS data. Please fill out a GPS IR form " +
+   "at <https://restonlimo.com/internal> (click on \"Employee Forms\") to report this issue.",
+   [[60,215,260,230]]
+  ],
   ["images/06-trips-listing.jpg",
    "Scroll down on the left side to see the trips listing. A trip begins when a vehicle is moving at least 5 mph, " +
    "and ends when the vehicle has been stopped for 5 minutes. Therefore, a single day, even a single job, might be " +
@@ -121,13 +127,8 @@ var converter = new showdown.Converter(),
   ["images/07-view-trip-photos.jpg",
    "Here you will see the photos both from the camera facing into the bus and from the one facing outside the bus. Click on " +
    "the photos along the bottom of the page or use the left/right arrows on the big photo to view all the photos. " +
-   "Click on the Back button to go back to the map.",
-   [[215,315,245,345],[700,315,725,345],[210,115,260,140]]
-  ],
-  ["images/08-last-connected.jpg",
-   "Back on the map view, one thing to look for is a \"Last Connected\" date. Whenever you see this, it means that there " +
-   "is a problem with the gateway (the GPS device), and the vehicle is not reporting GPS data. Please fill out a GPS IR form " +
-   "at <https://restonlimo.com/internal> to report this issue."
+   "Click on the Back button to go back to the map view for this vehicle. Click on \"Overview\" to go back to the home screen.",
+   [[215,315,245,345],[700,315,725,345],[210,115,260,140],[55,85,100,110]]
   ]
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
