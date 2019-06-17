@@ -90,10 +90,15 @@ var converter = new showdown.Converter();
   ],
   ["images/06-trips-listing.jpg",
    "Scroll down on the left side to see the trips listing. A trip begins when a vehicle is moving at least 5 mph, " +
-   "and ends when the vehicle has been stopped for 5 minutes. Therefore, a single day, even a single job, will be " +
+   "and ends when the vehicle has been stopped for 5 minutes. Therefore, a single day, even a single job, might be " +
    "broken up into multiple trips.",
    [[50,115,255,560]]
-  ]
+  ],
+  ["images/06.1-view-trip.jpg",
+   "Click on a trip (not on the photo!) to view the activity from just that trip on the map. Each gray dot on the " +
+   "map shows where a dashcam photo was taken. These photos are taken every two minutes during a trip. Place the " +
+   "mouse cursor over a dot to see the photo."
+   ]
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
       src = content[0],
