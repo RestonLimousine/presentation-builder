@@ -72,7 +72,9 @@ var converter = new showdown.Converter();
   ["images/05-vehicle-view.jpg",
    "After clicking on the vehicle, you will see this view. The vehicle's location is shown on the map, " +
    "and the vehicle's trips are listed on the left.\n* A green circle on the map means the vehicle is idling.\n" +
-   "* A green arrow means the vehicle is moving.\n* A gray circle means the engine is off."]
+   "* A green arrow means the vehicle is moving.\n* A gray circle means the engine is off.",
+   [[640,490,670,515]]
+  ]
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
       src = content[0],
