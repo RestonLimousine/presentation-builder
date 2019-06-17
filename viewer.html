@@ -17,6 +17,7 @@
     box-sizing: border-box;
     text-align: center;
     margin-bottom: 96px;
+    position: relative;
   }
   img {
     width: 100%;
@@ -37,6 +38,13 @@
     left: -100px;
     top: -100px;
   }
+  .rect {
+    position: absolute;
+    border: 5px solid red;
+  }
+  .text {
+    border: 1px solid gray;
+  }
 </style>
 </head>
 <body>
@@ -51,10 +59,13 @@ var converter = new showdown.Converter();
   ["images/03-main-screen.jpg",
    'You will now be taken to the "Fleet Overview" screen. Find a vehicle by searching through the listing on the left.'],
   ["images/04-sort-a-z.jpg",
-   'To make it easier to find a vehicle, sort the listing alphabetically.']
+   'To make it easier to find a vehicle, sort the listing alphabetically.',
+   [[50,145,150,235]]
+  ]
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
       src = content[0],
+      rects = content[2] || [],
       page = document.createElement("div"),
       img = document.createElement("img"),
       textDiv = document.createElement("div"),
@@ -74,6 +85,15 @@ var converter = new showdown.Converter();
   textDiv.className = "text";
   textDiv.innerHTML = text;
   page.appendChild(textDiv);
+  rects.forEach(function (rect) {
+    var rectDiv = document.createElement("div");
+    rectDiv.className = "rect";
+    rectDiv.style.left = rect[0] + "px";
+    rectDiv.style.top = rect[1] + "px";
+    rectDiv.style.width = rect[2] - rect[0] + "px";
+    rectDiv.style.height = rect[3] - rect[1] + "px";
+    page.appendChild(rectDiv);
+  });
   document.body.appendChild(page);
 });
 </script>
