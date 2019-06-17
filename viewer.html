@@ -28,8 +28,8 @@
     top: 0;
     right: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-start;
   }
   img {
     width: 100%;
@@ -113,6 +113,10 @@ var converter = new showdown.Converter(),
     "Each gray dot on the map shows where a dashcam photo was taken. These photos are taken every two minutes during " +
     "a trip. Place the mouse cursor over a dot to see the photo.",
    [[625,205,895,385]]
+  ],
+  ["images/06.1-view-trip.jpg",
+   "To view all dashcam photos from a trip, go back to the trips listing on the left and click on the photo showing for the trip.",
+   [[40,140,265,205]]
   ]
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
