@@ -37,6 +37,8 @@
     box-sizing: border-box;
   }
   .img {
+    border: 1px solid gray;
+    border-bottom: 0;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
@@ -62,7 +64,7 @@
   }
   .text {
     padding: 1em;
-    /*border: 1px solid gray;*/
+    border: 1px solid gray;
     flex-grow: 1;
     box-sizing: border-box;
   }
@@ -91,14 +93,16 @@ var converter = new showdown.Converter(),
    "with one of the following icons:\n* A green circle on the map means the vehicle is idling.\n" +
    "* A green arrow means the vehicle is moving.\n* A gray circle means the engine is off.\n\n" +
    "The blue line shows where the vehicle has travelled over the date range selected above the map.",
-   [[640,490,670,515]]
+   [[630,445,655,470]]
+   // [[640,490,670,515]]
   ],
   ["images/05.1-change-date.jpg",
    "To change the dates you are looking at, click on the date button above the map and choose a different " +
    "date range from the dropdown calendar. Once you change these dates, they will keep the new value you " +
    "gave them even as you look at other areas of the site, so always double check the dates to make that " +
    "you are looking at the right information.",
-   [[906,85,961,106]]
+   [[870,85,920,110]]
+   // [[906,85,961,106]]
   ],
   ["images/05-vehicle-view.jpg",
    "To the left of the map, you will see details on the vehicle, including its name, the most recent dashcam photo, " +
