@@ -83,7 +83,9 @@ var converter = new showdown.Converter();
   ],
   ["images/05-vehicle-view.jpg",
    "To the left of the map, you will see details on the vehicle, including its name, the most recent dashcam photo, " +
-   "current driver, mileage, fuel level, and more. The info that is available will vary by vehicle."] 
+   "current driver, mileage, fuel level, and more. The info that is available will vary by vehicle.",
+   [[55,120,260,560]]
+  ] 
 ].forEach(function (content) {
   var text = converter.makeHtml(content[1]),
       src = content[0],
