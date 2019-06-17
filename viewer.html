@@ -42,6 +42,7 @@
   }
   p {
     margin: 0;
+    line-height: 1.25em;
   }
   @media print {
     .page {
@@ -172,7 +173,9 @@ var converter = new showdown.Converter(),
   ],
   ["Harsh Event",
    "images/11-harsh-event.jpg",
-   ""
+   "This screen allows you to watch a video of the harsh event and identify the driver for facial recognition (click on the " +
+   "blue square). Place your mouse cursor over the chart to view speed, brake and other data on the driver's actions during " +
+   "the event."
   ]
 ].forEach(function (content) {
   var text = converter.makeHtml(content[2]),
