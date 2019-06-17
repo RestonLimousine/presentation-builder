@@ -59,6 +59,12 @@
     position: absolute;
     border: 5px solid red;
   }
+  . rect > div {
+    position: absolute;
+    height: 100%;
+    right:100%;
+    top:0;
+  }
   .text {
     padding: 1em;
     border: 1px solid gray;
@@ -174,8 +180,8 @@ var converter = new showdown.Converter(),
   ["Harsh Event",
    "images/11-harsh-event.jpg",
    "This screen allows you to watch a video of the harsh event and identify the driver for facial recognition (click on the " +
-   "blue square). Place your mouse cursor over the chart to view speed, brake and other data on the driver's actions during " +
-   "the event."
+   "blue square). You can also place your mouse cursor over the chart to view speed, brake and other data on the driver's " +
+   "actions during the event."
   ]
 ].forEach(function (content) {
   var text = converter.makeHtml(content[2]),
@@ -215,6 +221,7 @@ var converter = new showdown.Converter(),
   textDiv.className = "text";
   textDiv.innerHTML = text;
   page.appendChild(textDiv);
+  var whichRect = 1;
   rects.forEach(function (rect) {
     var rectDiv = document.createElement("div");
     rectDiv.className = "rect";
@@ -222,7 +229,11 @@ var converter = new showdown.Converter(),
     rectDiv.style.top = rect[1] + "px";
     rectDiv.style.width = rect[2] - rect[0] + "px";
     rectDiv.style.height = rect[3] - rect[1] + "px";
+    var rectNum = document.createElement("div");
+    rectNum.textContent = whichRect;
+    rectDiv.appendChild(rectNum);
     page.appendChild(rectDiv);
+    whichRect++;
   });
   document.body.insertBefore(page, coordinates);
 });
