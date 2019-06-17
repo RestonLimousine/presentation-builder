@@ -125,6 +125,7 @@ var converter = new showdown.Converter(),
       pageNoDiv = document.createElement("div");
   pageNoDiv.className = "page-no";
   pageNoDiv.textContent = pageNo;
+  page.appendChild(pageNoDiv);
   pageNo++;
   page.addEventListener("mousemove", function (e) {
     coordinates.textContent = (e.pageX - page.offsetLeft) + "," + (e.pageY - page.offsetTop);
